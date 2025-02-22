@@ -22,7 +22,8 @@
   /*grid-template-columns: repeat(3, 413px); */
   gap: 20px;
   padding-bottom: 40px;
-  max-width: 100%;
+  width: 1280px;
+  height: 970px;
   justify-content: center;
 }
 
@@ -31,7 +32,7 @@
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  height: 413px;
+  height: 445px;
   width: 413px;
   display: block;
 }
