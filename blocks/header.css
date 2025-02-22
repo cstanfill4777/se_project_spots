@@ -1,6 +1,53 @@
-/* Header */
+/* Header
 .header {
   background-color: #f4f4f4;
   padding: 40px;
   text-align: center;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3e6d4;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profile-info h2 {
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.edit-profile {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.new-post {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
