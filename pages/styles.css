@@ -3,3 +3,7 @@
 @import url(../blocks/menubar.css);
 @import url(../blocks/footer.css);
 @import url(../blocks/cards.css);
+
+body {
+  margin: 0;
+}
