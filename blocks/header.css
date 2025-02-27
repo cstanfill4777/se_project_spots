@@ -1,19 +1,17 @@
-/* Header
-.header {
-  background-color: #f4f4f4;
-  padding: 40px;
-  text-align: center;
-} */
-
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f3e6d4;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
+  justify-content: center;
+  /*align-items: center; */
+  background: #fff;
+  padding: 10px 0;
+  /*margin: 20px;
+  border-radius: 10px; */
   width: 1280px;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
 }
 
 .profile {
