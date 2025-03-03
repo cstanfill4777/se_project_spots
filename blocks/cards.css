@@ -16,18 +16,32 @@
 }
 */
 
-.cards {
+/*.cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
-  /*grid-template-columns: repeat(3, 413px); */
+  grid-template-columns: repeat(3, 413px);
   gap: 20px;
   padding-bottom: 40px;
   width: 1280px;
   height: 970px;
   justify-content: center;
+} */
+
+.cards {
+  padding-top: 20px;
 }
 
-.card {
+.cards__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
+}
+
+/*.card {
   background: white;
   border-radius: 10px;
   overflow: hidden;
@@ -47,4 +61,4 @@
 .card p {
   padding: 10px;
   font-size: 14px;
-}
+} */
