@@ -1,8 +1,8 @@
-/*.page {
-  display: flex;
+.page {
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; */
   background-color: #fcf5e5;
   min-height: 100vh;
 }
@@ -10,4 +10,4 @@
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
-} */
+}
