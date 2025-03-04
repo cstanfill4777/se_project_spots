@@ -1,32 +1,3 @@
-/* Cards
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #ddd;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  border-radius: 5px;
-}
-*/
-
-/*.cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-columns: repeat(3, 413px);
-  gap: 20px;
-  padding-bottom: 40px;
-  width: 1280px;
-  height: 970px;
-  justify-content: center;
-} */
-
 .cards {
   padding-top: 20px;
 }
@@ -40,25 +11,3 @@
   grid-template-columns: repeat(auto-fit, 413px);
   gap: 40px 20px;
 }
-
-/*.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  height: 445px;
-  width: 413px;
-  display: block;
-}
-
-.card img {
-  width: 413px;
-  height: 413px;
-  object-fit: cover;
-  display: block;
-}
-
-.card p {
-  padding: 10px;
-  font-size: 14px;
-} */

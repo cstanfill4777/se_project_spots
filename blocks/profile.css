@@ -6,6 +6,9 @@
 
 .profile__add-btn {
   margin-left: auto;
+  background-color: #212121;
+  color: #fcf5e5;
+  width: 149px;
 }
 
 .profile__avatar {
@@ -19,13 +22,19 @@
 
 .profile__edit-btn {
   margin-top: auto;
+  background: none;
+  border: none;
 }
 
 .profile__name {
   margin: 0 0 12px;
+  line-height: 32px;
   font-weight: 500;
+  color: #212121;
 }
 
 .profile__description {
   margin: 0;
+  line-height: 16px;
+  opacity: 0.7;
 }
