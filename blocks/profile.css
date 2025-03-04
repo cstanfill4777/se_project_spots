@@ -14,6 +14,9 @@
   width: 149px;
   height: 52px;
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
 .profile__avatar {
@@ -35,6 +38,10 @@
   border: none;
   font-size: 16px;
   line-height: 1;
+  padding: 0;
+  gap: 8px;
+  display: flex;
+  justify-content: start;
 }
 
 .profile__name {

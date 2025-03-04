@@ -31,8 +31,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  max-width: 353px;
-  padding-bottom: 5px;
+  flex: 1; /* Allows it to take space but not exceed limits */
+  min-width: 0; /* Necessary in flexbox to prevent overflow */
+  max-width: 80%;
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 627px) {
