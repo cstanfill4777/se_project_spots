@@ -23,12 +23,23 @@
 .card__title {
   color: #212121;
   font-weight: 500;
-  line-height: 24px;
-  size: 20px;
+  font-size: 20px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 353px;
 }
 
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+  }
+
+  .card__title {
+    max-width: 268px;
   }
 }
