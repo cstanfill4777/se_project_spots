@@ -11,6 +11,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 2%;
 }
 
 .card__like-btn {
@@ -34,15 +35,16 @@
   font-size: 20px;
   line-height: 1.2;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
-  line-clamp: 3;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   flex: 1; /* Allows it to take space but not exceed limits */
   min-width: 0; /* Necessary in flexbox to prevent overflow */
   max-width: 80%;
   padding-bottom: 0;
+}
+
+.card__like-btn:hover {
+  background-image: url(../images/heart.svg);
 }
 
 @media screen and (max-width: 627px) {
@@ -51,6 +53,11 @@
   }
 
   .card__title {
-    max-width: 268px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .card:not(:last-child) {
+    padding-bottom: 0; /* Removes bottom padding from all but the last card */
   }
 }
