@@ -1,11 +1,6 @@
-.card {
-  width: 413px;
-  font-weight: 500;
-}
-
 .card__image {
   height: 413px;
-  width: 413px;
+  width: 100%;
   object-fit: cover;
   display: block;
 }
@@ -30,4 +25,10 @@
   font-weight: 500;
   line-height: 24px;
   size: 20px;
+}
+
+@media screen and (max-width: 627px) {
+  .card__image {
+    height: 288px;
+  }
 }
