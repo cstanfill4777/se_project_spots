@@ -14,6 +14,9 @@ Spots - A Social Image Sharing Platform
 
 Spots is a responsive web application that simulates a social media platform where users can upload, view, and interact with image-based content.
 
+**Video Overview**
+https://drive.google.com/file/d/1lXqQ6OPK-F5lIkKdSnPIZ3T_O7R_DiHT/view?usp=drive_link
+
 ## Features
 
 The application is responsive to multiple screen resolutions. It can be viewed on desktop, tablet, or mobile devices. It features cards with images and titles that are structured in a grid format. The simulated "New Post", "Edit Profile", and "like" buttons feature distinct hover states. The number of columns varies from 1 to 3 and is responsive to the width of the screen.
