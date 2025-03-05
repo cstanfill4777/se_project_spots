@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  flex-direction: column; /* Stack image and text */
+  flex-direction: column;
   justify-content: flex-start;
   gap: 12px;
   padding-bottom: 20px;
@@ -38,8 +38,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  flex: 1; /* Allows it to take space but not exceed limits */
-  min-width: 0; /* Necessary in flexbox to prevent overflow */
+  flex: 1;
+  min-width: 0;
   max-width: 80%;
   padding-bottom: 0;
 }
@@ -59,6 +59,6 @@
   }
 
   .card:not(:last-child) {
-    padding-bottom: 0; /* Removes bottom padding from all but the last card */
+    padding-bottom: 0;
   }
 }
