@@ -30,6 +30,16 @@ Spots is a responsive web application where users can upload, view, and interact
 
 **Images**
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
+![Avatar](images/image-2.png)
 
-Good luck and have fun!
+![Card 1](images/pexels-kassandre-pedro-8639743-1.png)
+
+![Card 2](<images/pexels-kassandre-pedro-8639743-1-(2).png>)
+
+![Card 3](<images/pexels-kassandre-pedro-8639743-1-(3).png>)
+
+![Card 4](<images/pexels-kassandre-pedro-8639743-1-(4).png>)
+
+![Card 5](<images/pexels-kassandre-pedro-8639743-1-(5).png>)
+
+![Card 6](<images/pexels-kassandre-pedro-8639743-1-(6).png>)
