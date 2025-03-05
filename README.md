@@ -35,19 +35,10 @@ This project is the foundation of a social media platform. Further implementatio
 - **Font Imports & Fallbacks**: To use a custom font with proper fallbacks.
 - **Git & GitHub**: Version control and project hosting.
 
-**Hover Effects for New Post & Edit Profile Buttons**
+**Hover Effects for Buttons**
 
-- **CSS Transform: Scale Property** – Enlarges the button slightly when hovered.
-- **Font Color Change** -
-  For the Edit Profile button.
-
-**Like Button (SVG-Based Hover Effect)**
-The Like button hover effect was created by **modifying the raw SVG code** of the heart icon and **swapping it on hover**.
-
-**Techniques Used**
-
-- **Custom SVG Editing** – A second version of the heart icon (`heart-hover.svg`) was created with different properties.
-- **CSS `background-image` Swap** – The hover state triggers a switch between the default icon and the edited icon using the background-image property in CSS.
+- **CSS Opacity Property** -
+  The opacity of the icons was altered when hovered.
 
 ## Figma
 

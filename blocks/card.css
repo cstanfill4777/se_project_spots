@@ -11,7 +11,7 @@
   width: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 2%;
+  border-radius: 8px;
 }
 
 .card__like-btn {
@@ -45,7 +45,7 @@
 }
 
 .card__like-btn:hover {
-  background-image: url(../images/heart.svg);
+  opacity: 1;
 }
 
 @media screen and (max-width: 627px) {
