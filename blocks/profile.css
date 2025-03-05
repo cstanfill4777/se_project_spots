@@ -82,11 +82,11 @@
 }
 
 .profile__add-btn:hover {
-  transform: scale(1.05); /* Slightly bigger (5%) */
+  transform: scale(1.05);
 }
 
 .profile__edit-btn:hover {
-  transform: scale(1.05); /* Slightly bigger (5%) */
+  transform: scale(1.05);
   color: red;
 }
 
