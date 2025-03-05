@@ -54,6 +54,8 @@ The Like button hover effect was created by **modifying the raw SVG code** of th
 
 ![Avatar](images/demo/image-2.png)
 
+_The user profile includes an avatar._
+
 ![Card 1](images/demo/pexels-kassandre-pedro-8639743-1.png)
 
 ![Card 2](<images/demo/pexels-kassandre-pedro-8639743-1-(2).png>)
@@ -65,6 +67,8 @@ The Like button hover effect was created by **modifying the raw SVG code** of th
 ![Card 5](<images/demo/pexels-kassandre-pedro-8639743-1-(5).png>)
 
 ![Card 6](<images/demo/pexels-kassandre-pedro-8639743-1-(6).png>)
+
+_Each card represents an uploaded post._
 
 ## Live Demo
 
