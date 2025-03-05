@@ -35,10 +35,7 @@ This project is the foundation of a social media platform. Further implementatio
 - **Font Imports & Fallbacks**: To use a custom font with proper fallbacks.
 - **Git & GitHub**: Version control and project hosting.
 
-**Hover Effects for Buttons**
-
-- **CSS Opacity Property** -
-  The opacity of the icons was altered when hovered.
+- **CSS Opacity Property**: To alter the opacity of buttons when hovered as well as for proper reproduction of text elements.
 
 ## Figma
 
