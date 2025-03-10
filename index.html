@@ -113,6 +113,44 @@
       <footer class="footer">
         <p class="footer__text">2025 © Spots</p>
       </footer>
+      <!-- Modal Popup -->
+      <div class="modal">
+        <div class="modal__container">
+          <!-- Close Button -->
+          <button class="modal__close-button">&times;</button>
+
+          <!-- Modal Title -->
+          <h2 class="modal__title">Edit Profile</h2>
+
+          <!-- Modal Form -->
+          <form class="modal__form" name="edit-profile">
+            <!-- Name Field -->
+            <label class="modal__label" for="name">
+              Name
+              <input
+                type="text"
+                class="modal__input"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </label>
+
+            <!-- Description Field -->
+            <label class="modal__label" for="description">
+              Description
+              <input
+                type="text"
+                class="modal__input"
+                id="description"
+                placeholder="Describe yourself"
+              />
+            </label>
+
+            <!-- Submit Button -->
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="index.js" defer></script>
   </body>
