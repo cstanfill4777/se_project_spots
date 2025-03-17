@@ -38,50 +38,68 @@
           </button>
         </section>
         <section class="cards page__section">
-          <ul class="cards__list">
-          </ul>
+          <ul class="cards__list"></ul>
         </section>
 
         <template id="card-template">
-            <li class="card">
-                <img class="card__image" src="" alt="">
-                <h3 class="card__title"></h3>
-            </li>
+          <li class="card">
+            <img class="card__image" src="" alt="" />
+            <h3 class="card__title"></h3>
+          </li>
         </template>
       </main>
 
-    <div class="modal">
+      <div class="modal">
         <div class="modal__container">
-            <button class="modal__close-button">&times;</button>
-            <h2 class="modal__title">Edit Profile</h2>
-            <form class="modal__form">
-                <label for="profile-name-input">Name</label>
-                <input type="text" id="profile-name-input" class="modal__input" required>
-                <label for="profile-description-input">Description</label>
-                <input type="text" id="profile-description-input" class="modal__input" required>
-                <button type="submit" class="modal__submit-button">Save</button>
-            </form>
+          <button class="modal__close-button">&times;</button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form class="modal__form">
+            <label for="profile-name-input">Name</label>
+            <input
+              type="text"
+              id="profile-name-input"
+              class="modal__input"
+              required
+            />
+            <label for="profile-description-input">Description</label>
+            <input
+              type="text"
+              id="profile-description-input"
+              class="modal__input"
+              required
+            />
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
         </div>
-    </div>
-
-    <div id="add-post-modal" class="modal">
-      <div class="modal__content">
-        <h2>Add a new post</h2>
-        <form id="add-post-form">
-          <input type="text" id="post-title" placeholder="Post Title" required />
-          <input type="url" id="post-image" placeholder="Image URL" required />
-          <button type="submit">Add Post</button>
-        </form>
-        <button class="modal__close-btn">Close</button>
       </div>
-    </div>
 
-    <footer class="footer">
+      <div id="add-post-modal" class="modal">
+        <div class="modal__content">
+          <h2>Add a new post</h2>
+          <form id="add-post-form">
+            <input
+              type="text"
+              id="post-title"
+              placeholder="Post Title"
+              required
+            />
+            <input
+              type="url"
+              id="post-image"
+              placeholder="Image URL"
+              required
+            />
+            <button type="submit">Add Post</button>
+          </form>
+          <button class="modal__close-btn">Close</button>
+        </div>
+      </div>
+
+      <footer class="footer">
         <p class="footer__text">2025 © Spots</p>
       </footer>
-
-
+    </div>
 
     <script src="./scripts/index.js" defer></script>
-</body>
+  </body>
 </html>
