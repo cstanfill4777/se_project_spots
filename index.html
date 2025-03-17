@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -113,18 +113,18 @@
       <footer class="footer">
         <p class="footer__text">2025 © Spots</p>
       </footer>
-      <!-- Modal Popup -->
+       Modal Popup
       <div class="modal">
         <div class="modal__container">
-          <!-- Close Button -->
+           Close Button
           <button class="modal__close-button">&times;</button>
 
-          <!-- Modal Title -->
+           Modal Title
           <h2 class="modal__title">Edit Profile</h2>
 
-          <!-- Modal Form -->
+           Modal Form
           <form class="modal__form" name="edit-profile">
-            <!-- Name Field -->
+             Name Field
             <label class="modal__label" for="name">
               Name
               <input
@@ -135,7 +135,7 @@
               />
             </label>
 
-            <!-- Description Field -->
+            Description Field
             <label class="modal__label" for="description">
               Description
               <input
@@ -146,7 +146,7 @@
               />
             </label>
 
-            <!-- Submit Button -->
+             Submit Button
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
@@ -154,4 +154,92 @@
     </div>
     <script src="index.js" defer></script>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="???" />
+    <meta name="author" content="???" />
+    <meta name="keywords" content="HTML, CSS, ???" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Spots</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="Bessie Coleman"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-btn">
+              <img src="./images/pencil.svg" alt="Pencil icon" />Edit Profile
+            </button>
+          </div>
+          <button type="button" class="profile__add-btn">
+            <img
+              src="./images/plus.svg"
+              alt="Plus icon"
+              class="profile__add-btn-icon"
+            />New Post
+          </button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list">
+          </ul>
+        </section>
+
+        <template id="card-template">
+            <li class="card">
+                <img class="card__image" src="" alt="">
+                <h3 class="card__title"></h3>
+            </li>
+        </template>
+      </main>
+
+    <div class="modal">
+        <div class="modal__container">
+            <button class="modal__close-button">&times;</button>
+            <h2 class="modal__title">Edit Profile</h2>
+            <form class="modal__form">
+                <label for="profile-name-input">Name</label>
+                <input type="text" id="profile-name-input" class="modal__input" required>
+                <label for="profile-description-input">Description</label>
+                <input type="text" id="profile-description-input" class="modal__input" required>
+                <button type="submit" class="modal__submit-button">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="add-post-modal" class="modal">
+      <div class="modal__content">
+        <h2>Add a new post</h2>
+        <form id="add-post-form">
+          <input type="text" id="post-title" placeholder="Post Title" required />
+          <input type="url" id="post-image" placeholder="Image URL" required />
+          <button type="submit">Add Post</button>
+        </form>
+        <button class="modal__close-btn">Close</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">2025 © Spots</p>
+      </footer>
+
+
+
+    <script src="./scripts/index.js" defer></script>
+</body>
 </html>

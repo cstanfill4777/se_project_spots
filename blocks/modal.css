@@ -1,22 +1,21 @@
-/* Modal Overlay */
-.modal {
+/* .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  display: none; /* Hidden by default */
+  display: none;
   align-items: center;
   justify-content: center;
 }
 
-/* Show Modal */
+
 .modal_active {
   display: flex;
 }
 
-/* Modal Container */
+
 .modal__container {
   background: white;
   max-width: 730px;
@@ -26,14 +25,14 @@
   position: relative;
 }
 
-/* Modal Title */
+
 .modal__title {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 32px;
 }
 
-/* Form Labels */
+
 .modal__label {
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@
   margin-bottom: 32px;
 }
 
-/* Input Fields */
+
 .modal__input {
   width: 100%;
   padding: 16px 12px;
@@ -50,7 +49,7 @@
   border-radius: 8px;
 }
 
-/* Submit Button */
+
 .modal__submit-button {
   width: 100%;
   padding: 18px 0;
@@ -67,7 +66,7 @@
   background: #0056b3;
 }
 
-/* Close Button */
+
 .modal__close-button {
   position: absolute;
   top: 32px;
@@ -80,7 +79,7 @@
   cursor: pointer;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 627px) {
   .modal__container {
     padding: 12px;
@@ -103,4 +102,71 @@
   .modal__submit-button {
     width: 100%;
   }
+} */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.modal_open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__container {
+  background: white;
+  padding: 32px;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal__submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal__submit-button:hover {
+  background-color: #0056b3;
 }
