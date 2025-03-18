@@ -58,31 +58,6 @@ function handleFormSubmit(event) {
   closeModal();
 }
 
-// Function to Create a Card Element
-
-// function getCardElement(data) {
-//   const cardElement = cardTemplate.cloneNode(true);
-//   const cardImage = cardElement.querySelector(".card__image");
-//   const cardTitle = cardElement.querySelector(".card__title");
-
-//   cardImage.src = data.link;
-//   cardImage.alt = data.name;
-//   cardTitle.textContent = data.name;
-
-//   return cardElement;
-// }
-
-// function getCardElement(data) {
-//   const cardTemplate = document.querySelector("#card-template").content;
-//   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
-//   cardElement.querySelector(".card__title").textContent = data.name;
-//   cardElement.querySelector(".card__image").src = data.link;
-//   cardElement.querySelector(".card__image").alt = data.name;
-
-//   return cardElement;
-// }
-
 function getCardElement(data) {
   const cardTemplate = document.querySelector("#card-template");
   const cardElement = cardTemplate.content
