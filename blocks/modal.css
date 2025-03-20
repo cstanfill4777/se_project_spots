@@ -42,6 +42,10 @@
   opacity: 0.4;
 }
 
+.modal__close-button:hover {
+  opacity: 1;
+}
+
 .modal__title {
   font-size: 24px;
   margin: 0;
