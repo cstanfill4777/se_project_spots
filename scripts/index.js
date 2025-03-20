@@ -58,22 +58,6 @@ function handleFormSubmit(event) {
   closeModal();
 }
 
-// function getCardElement(data) {
-//   const cardTemplate = document.querySelector("#card-template");
-//   const cardElement = cardTemplate.content
-//     .querySelector(".card")
-//     .cloneNode(true);
-
-//   const cardImage = cardElement.querySelector(".card__image");
-//   const cardTitle = cardElement.querySelector(".card__title");
-
-//   cardTitle.textContent = data.name;
-//   cardImage.src = data.link;
-//   cardImage.alt = data.name;
-
-//   return cardElement;
-// }
-
 function getCardElement(data) {
   // Clone the card template
   const cardElement = cardTemplate.cloneNode(true).querySelector(".card");
@@ -86,14 +70,6 @@ function getCardElement(data) {
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
-
-  // // Create heart button
-  // const likeButton = document.createElement("button");
-  // likeButton.classList.add("card__like-btn");
-
-  // // Append the button inside the card content
-  // const cardContent = cardElement.querySelector(".card__content");
-  // cardContent.appendChild(likeButton);
 
   let likeButton = cardElement.querySelector(".card__like-btn");
 
@@ -150,7 +126,7 @@ addPostCloseBtn.addEventListener("click", () => {
 
 // Function to Handle Form Submission
 addPostForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Stop page refresh
+  event.preventDefault();
 
   const title = postTitleInput.value;
   const image = postImageInput.value;
@@ -160,13 +136,10 @@ addPostForm.addEventListener("submit", (event) => {
     return;
   }
 
-  // Create new card element
   const cardElement = getCardElement({ name: title, link: image });
 
-  // Add to the top of the list
   document.querySelector(".cards__list").prepend(cardElement);
 
-  // Close modal & clear inputs
   addPostModal.classList.remove("modal_open");
   postTitleInput.value = "";
   postImageInput.value = "";
@@ -194,39 +167,26 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Select all input fields inside the modal form
 const modalInputs = document.querySelectorAll(".modal__input");
 
-// Function to check if the input field is empty or filled
 function checkInputState(input) {
   if (input.value.trim() !== "") {
-    input.classList.add("filled"); // Add class when input has text
-    console.log(
-      `✅ Added .filled to: ${input.id} (Current value: ${input.value})`
-    );
+    input.classList.add("filled");
   } else {
-    input.classList.remove("filled"); // Remove class when input is empty
-    console.log(
-      `❌ Removed .filled from: ${input.id} (Current value: ${input.value})`
-    );
+    input.classList.remove("filled");
   }
 }
 
-// Run check when the user types in the input field
 modalInputs.forEach((input) => {
   input.addEventListener("input", () => checkInputState(input));
 });
 
-// Ensure `.filled` is applied when modal opens
 function openModal() {
-  // Fill inputs from profile values
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
 
-  // Check if the inputs have text and apply `.filled`
   modalInputs.forEach((input) => checkInputState(input));
 
-  // Show the modal
   modal.classList.add("modal_open");
 }
 
@@ -238,12 +198,10 @@ function toggleFilledClass(input) {
   }
 }
 
-// Apply class on input change
 document.querySelectorAll(".modal__input").forEach((input) => {
   input.addEventListener("input", function () {
     toggleFilledClass(input);
   });
 
-  // Also apply class when the modal opens
   toggleFilledClass(input);
 });
