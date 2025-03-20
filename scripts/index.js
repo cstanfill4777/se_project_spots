@@ -58,18 +58,55 @@ function handleFormSubmit(event) {
   closeModal();
 }
 
-function getCardElement(data) {
-  const cardTemplate = document.querySelector("#card-template");
-  const cardElement = cardTemplate.content
-    .querySelector(".card")
-    .cloneNode(true);
+// function getCardElement(data) {
+//   const cardTemplate = document.querySelector("#card-template");
+//   const cardElement = cardTemplate.content
+//     .querySelector(".card")
+//     .cloneNode(true);
 
+//   const cardImage = cardElement.querySelector(".card__image");
+//   const cardTitle = cardElement.querySelector(".card__title");
+
+//   cardTitle.textContent = data.name;
+//   cardImage.src = data.link;
+//   cardImage.alt = data.name;
+
+//   return cardElement;
+// }
+
+function getCardElement(data) {
+  // Clone the card template
+  const cardElement = cardTemplate.cloneNode(true).querySelector(".card");
+
+  // Select elements within the cloned card
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
 
-  cardTitle.textContent = data.name;
+  // Set the content from data
   cardImage.src = data.link;
   cardImage.alt = data.name;
+  cardTitle.textContent = data.name;
+
+  // // Create heart button
+  // const likeButton = document.createElement("button");
+  // likeButton.classList.add("card__like-btn");
+
+  // // Append the button inside the card content
+  // const cardContent = cardElement.querySelector(".card__content");
+  // cardContent.appendChild(likeButton);
+
+  let likeButton = cardElement.querySelector(".card__like-btn");
+
+  if (!likeButton) {
+    likeButton = document.createElement("button");
+    likeButton.classList.add("card__like-btn");
+    likeButton.innerHTML = '<img src="images/Union.svg" alt="Heart">';
+
+    const cardContent = cardElement.querySelector(".card__content");
+    if (cardContent) {
+      cardContent.appendChild(likeButton);
+    }
+  }
 
   return cardElement;
 }
@@ -149,4 +186,10 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("New Post button clicked, opening modal...");
     addPostModal.classList.add("modal_open");
   });
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("card__like-btn")) {
+    event.target.classList.toggle("card__like-btn_active");
+  }
 });
