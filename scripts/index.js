@@ -229,3 +229,21 @@ function openModal() {
   // Show the modal
   modal.classList.add("modal_open");
 }
+
+function toggleFilledClass(input) {
+  if (input.value.trim().length > 0) {
+    input.classList.add("filled");
+  } else {
+    input.classList.remove("filled");
+  }
+}
+
+// Apply class on input change
+document.querySelectorAll(".modal__input").forEach((input) => {
+  input.addEventListener("input", function () {
+    toggleFilledClass(input);
+  });
+
+  // Also apply class when the modal opens
+  toggleFilledClass(input);
+});

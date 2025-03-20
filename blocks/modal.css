@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   border-radius: 8px;
   position: relative;
   text-align: left;
@@ -40,6 +41,7 @@
   width: 40px;
   height: 40px;
   opacity: 0.4;
+  margin-left: auto;
 }
 
 .modal__close-button:hover {
@@ -59,6 +61,9 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+  width: 630px;
+  height: 40px;
+  margin: 0;
 }
 
 .modal__input {
@@ -80,6 +85,7 @@
   justify-content: space-between;
   flex-direction: column;
   height: 630px;
+  width: 630px;
 }
 
 .modal__form-field {
@@ -119,4 +125,42 @@
 
 .modal__input.filled:hover {
   border: 1px solid rgba(33, 33, 33, 0.4) !important;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__container {
+    width: 300px;
+    height: 336px;
+    padding: 12px;
+    gap: 24px;
+  }
+
+  .modal__edit-title-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .modal__form {
+    width: 276px;
+    height: 248px;
+  }
+
+  .modal__input {
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .modal__submit-button {
+    width: 276px;
+  }
 }
