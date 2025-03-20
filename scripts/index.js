@@ -193,3 +193,39 @@ document.addEventListener("click", function (event) {
     event.target.classList.toggle("card__like-btn_active");
   }
 });
+
+// Select all input fields inside the modal form
+const modalInputs = document.querySelectorAll(".modal__input");
+
+// Function to check if the input field is empty or filled
+function checkInputState(input) {
+  if (input.value.trim() !== "") {
+    input.classList.add("filled"); // Add class when input has text
+    console.log(
+      `✅ Added .filled to: ${input.id} (Current value: ${input.value})`
+    );
+  } else {
+    input.classList.remove("filled"); // Remove class when input is empty
+    console.log(
+      `❌ Removed .filled from: ${input.id} (Current value: ${input.value})`
+    );
+  }
+}
+
+// Run check when the user types in the input field
+modalInputs.forEach((input) => {
+  input.addEventListener("input", () => checkInputState(input));
+});
+
+// Ensure `.filled` is applied when modal opens
+function openModal() {
+  // Fill inputs from profile values
+  nameInput.value = profileName.textContent;
+  descriptionInput.value = profileDescription.textContent;
+
+  // Check if the inputs have text and apply `.filled`
+  modalInputs.forEach((input) => checkInputState(input));
+
+  // Show the modal
+  modal.classList.add("modal_open");
+}

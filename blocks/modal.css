@@ -72,6 +72,7 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .modal__form {
@@ -111,4 +112,11 @@
 
 .modal__submit-button:hover {
   background-color: #0056b3;
+}
+.modal__input:hover {
+  border: 1px solid rgba(33, 33, 33, 1);
+}
+
+.modal__input.filled:hover {
+  border: 1px solid rgba(33, 33, 33, 0.4) !important;
 }
