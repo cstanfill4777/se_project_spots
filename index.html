@@ -55,35 +55,35 @@
 
       <div class="modal">
         <div class="modal__container">
-          <div class="modal__edit-title-container">
-            <button class="modal__close-button">
+
+            <button type="submit" class="modal__close-button">
               <img src="./images/x.png" alt="Close icon" />
             </button>
             <h2 class="modal__title">Edit profile</h2>
-          </div>
+
           <form class="modal__form">
-            <div class="modal__form-field">
-              <label class="modal__form-title" for="profile-name-input"
-                >Name</label
-              >
+            <!-- <div class="modal__form-field"> -->
+              <label class="modal__label" for="profile-name-input"
+                >Name
               <input
                 type="text"
                 id="profile-name-input"
                 class="modal__input"
                 required
-              />
-            </div>
-            <div class="modal__form-field">
-              <label class="modal__form-title" for="profile-description-input"
-                >Description</label
+              /></label
               >
+            <!-- </div>
+            <div class="modal__form-field"> -->
+              <label class="modal__label" for="profile-description-input"
+                >Description
               <input
                 type="text"
                 id="profile-description-input"
                 class="modal__input"
                 required
-              />
-            </div>
+              /></label
+              >
+            <!-- </div> -->
             <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
