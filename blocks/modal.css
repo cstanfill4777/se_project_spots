@@ -167,6 +167,10 @@
     padding: 22px 12px 12px;
   }
 
+  .modal__caption {
+    font-size: 16px;
+  }
+
   .modal__title {
     font-size: 20px;
   }
