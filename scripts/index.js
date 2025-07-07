@@ -45,6 +45,7 @@ const descriptionInputEl = editFormEl.querySelector(
 const addCardModal = document.querySelector("#add-card-modal");
 const addCardCloseBtn = addCardModal.querySelector(".modal__close");
 const addCardFormEl = addCardModal.querySelector(".modal__form");
+const cardSubmitBtn = addCardModal.querySelector(".modal__submit-button");
 const captionInputEl = addCardFormEl.querySelector("#card-caption-input");
 const linkInputEl = addCardFormEl.querySelector("#card-link-input");
 
@@ -137,6 +138,8 @@ addCardFormEl.addEventListener("submit", function (evt) {
 
   captionInputEl.value = "";
   linkInputEl.value = "";
+
+  disableButton(cardSubmitBtn, settings);
 
   closeModal(addCardModal);
 });

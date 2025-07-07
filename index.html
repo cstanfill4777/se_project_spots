@@ -71,7 +71,7 @@
         ></button>
         <h3 class="modal__title">Edit profile</h3>
 
-        <form class="modal__form" id="edit-profile-form">
+        <form class="modal__form" id="edit-profile-form" novalidate>
           <label class="modal__label" for="profile-name-input"
             >Name
             <input
@@ -80,8 +80,13 @@
               class="modal__input"
               name="name"
               placeholder="Type your name"
-              required
-          /></label>
+              minlength="2"
+              maxlength="40"
+              required /><span
+              id="card-link-input-error"
+              class="modal__error"
+            ></span
+          ></label>
 
           <label class="modal__label" for="profile-description-input"
             >Description
@@ -90,8 +95,13 @@
               id="profile-description-input"
               class="modal__input"
               name="description"
-              required
-          /></label>
+              minlength="2"
+              maxlength="200"
+              required /><span
+              id="card-link-input-error"
+              class="modal__error"
+            ></span
+          ></label>
 
           <button type="submit" class="button modal__submit-button">
             Save
@@ -108,7 +118,7 @@
           type="button"
         ></button>
         <h3 class="modal__title">New post</h3>
-        <form class="modal__form" id="card-form">
+        <form class="modal__form" id="card-form" novalidate>
           <label for="card-link-input" class="modal__label">
             Image link
             <input
@@ -118,7 +128,7 @@
               id="card-link-input"
               placeholder="Paste a link to the picture"
               required
-            />
+            /><span id="card-link-input-error" class="modal__error"></span>
           </label>
           <label for="card-caption-input" class="modal__label">
             Caption
@@ -128,8 +138,10 @@
               name="caption"
               placeholder="Type your caption"
               type="text"
+              minlength="2"
+              maxlength="30"
               required
-            />
+            /><span id="card-link-input-error" class="modal__error"></span>
           </label>
           <button class="modal__submit-button" type="submit">Save</button>
         </form>
@@ -149,5 +161,6 @@
     </div>
 
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validation.js"></script>
   </body>
 </html>
