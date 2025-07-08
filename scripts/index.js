@@ -90,15 +90,41 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  function handleOverlayClick(event) {
+    if (event.target === modal) {
+      closeModal(modal);
+    }
+  }
+
+  function handleEscKey(event) {
+    if (event.key === "Escape") {
+      closeModal(modal);
+    }
+  }
+
+  modal._handleOverlayClick = handleOverlayClick;
+  modal._handleEscKey = handleEscKey;
+
+  modal.addEventListener("click", handleOverlayClick);
+  document.addEventListener("keydown", handleEscKey);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+
+  modal.removeEventListener("click", modal._handleOverlayClick);
+  document.removeEventListener("keydown", modal._handleEscKey);
+
+  delete modal._handleOverlayClick;
+  delete modal._handleEscKey;
 }
 
 editProfileBtn.addEventListener("click", function () {
   nameInputEl.value = profileNameEl.textContent;
   descriptionInputEl.value = profileDescriptionEl.textContent;
+  resetValidation(editFormEl, [nameInputEl, descriptionInputEl]);
+
   openModal(editProfileModal);
 });
 
@@ -139,7 +165,7 @@ addCardFormEl.addEventListener("submit", function (evt) {
   captionInputEl.value = "";
   linkInputEl.value = "";
 
-  disableButton(cardSubmitBtn, settings);
+  disableButton(cardSubmitBtn);
 
   closeModal(addCardModal);
 });

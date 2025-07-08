@@ -98,7 +98,10 @@
   color: red;
   margin-top: 8px;
   visibility: hidden;
-  /* TODO - use correct color and font size */
+}
+
+.modal__error_visible {
+  visibility: visible;
 }
 
 .modal__caption {

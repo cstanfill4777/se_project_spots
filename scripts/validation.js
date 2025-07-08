@@ -10,8 +10,8 @@ const settings = {
 const showInputError = (formEl, inputEl, errorMsg) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  inputEl.classList.add(settings.inputErrorClass);
-  errorMsgEl.classList.add(settings.errorClass);
+  inputEl.classList.add(config.inputErrorClass);
+  errorMsgEl.classList.add(config.errorClass);
 };
 
 const hideInputError = (formEl, inputEl) => {
@@ -40,7 +40,7 @@ const toggleButtonState = (inputList, buttonEl) => {
     disableButton(buttonEl);
   } else {
     buttonEl.disabled = false;
-    buttonEl.classList.remove(settings.inactiveButtonClass);
+    buttonEl.classList.remove(config.inactiveButtonClass);
   }
 };
 
@@ -49,11 +49,17 @@ const disableButton = (buttonEl) => {
   buttonEl.classList.add(settings.inactiveButtonClass);
 };
 
+const resetValidation = (formEl, inputList) => {
+  inputList.forEach((input) => {
+    hideInputError(formEl, input);
+  });
+};
+
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonElement = formEl.querySelector(config.submitButtonSelector);
 
-  toggleButtonState(inputList, buttonElement, config);
+  toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
