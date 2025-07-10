@@ -10,8 +10,8 @@ const settings = {
 const showInputError = (formEl, inputEl, errorMsg) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  inputEl.classList.add(config.inputErrorClass);
-  errorMsgEl.classList.add(config.errorClass);
+  inputEl.classList.add(settings.inputErrorClass);
+  errorMsgEl.classList.add(settings.errorClass);
 };
 
 const hideInputError = (formEl, inputEl) => {
@@ -40,7 +40,7 @@ const toggleButtonState = (inputList, buttonEl) => {
     disableButton(buttonEl);
   } else {
     buttonEl.disabled = false;
-    buttonEl.classList.remove(config.inactiveButtonClass);
+    buttonEl.classList.remove(settings.inactiveButtonClass);
   }
 };
 
