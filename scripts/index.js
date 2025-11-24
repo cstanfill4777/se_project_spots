@@ -3,6 +3,7 @@ const addCardBtn = document.querySelector(".profile__new-post-btn");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 const profileAvatarEl = document.querySelector("#profile-avatar");
+const avatarEditButton = document.querySelector(".profile__avatar-edit-button");
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close");
@@ -140,6 +141,10 @@ editProfileBtn.addEventListener("click", function () {
   resetValidation(editFormEl, [nameInputEl, descriptionInputEl]);
 
   openModal(editProfileModal);
+});
+
+avatarEditButton.addEventListener("click", () => {
+  profileAvatarEl.click();
 });
 
 profileAvatarEl.addEventListener("click", () => {
