@@ -65,3 +65,7 @@ _Each card represents an uploaded post._
 
 You can view and use the project directly here:  
 **[Spots](https://cstanfill4777.github.io/se_project_spots/)**
+
+## Project Pitch Video
+
+This video [Spots Stage 2 Project Pitch Video](https://drive.google.com/file/d/1D0SEldnP9UOwanusJhr_z6O3pQ4FTnpp/view?usp=sharing) is a brief description of the project and demo of some of its features.
