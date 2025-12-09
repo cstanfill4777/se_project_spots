@@ -227,3 +227,63 @@
     max-width: unset;
   }
 }
+
+.modal__content_type_delete {
+  max-width: 630px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 32px 20px;
+  box-sizing: border-box;
+}
+
+.modal__title_type_delete {
+  margin: 0 0 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: #212121;
+}
+
+.modal__button-row {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.modal__button {
+  min-width: 156px;
+  height: 52px;
+  padding: 18px 32px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal__button_delete {
+  background-color: #ff6565;
+  color: #ffffff;
+  border: none;
+}
+
+.modal__button_cancel {
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+}
+
+@media screen and (max-width: 320px) {
+  .modal__submit-button,
+  .modal__button_delete,
+  .modal__button_cancel {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+}
