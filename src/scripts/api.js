@@ -67,7 +67,7 @@ class Api {
   }
 }
 
-const api = new Api({
+export const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
     authorization: "d0116f0a-372b-4789-b392-672615eb063f",

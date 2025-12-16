@@ -1,3 +1,6 @@
+import { api } from "./api.js";
+import { resetValidation, disableButton } from "./validation.js";
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const addCardBtn = document.querySelector(".profile__new-post-btn");
 const profileNameEl = document.querySelector(".profile__name");
