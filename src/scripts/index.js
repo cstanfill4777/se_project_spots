@@ -1,3 +1,6 @@
+import { api } from "./api.js";
+import { resetValidation, disableButton } from "./validation.js";
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const addCardBtn = document.querySelector(".profile__new-post-btn");
 const profileNameEl = document.querySelector(".profile__name");
@@ -31,9 +34,12 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const deleteCardModal = document.querySelector("#delete-card-modal");
 const deleteCardFormEl = deleteCardModal.querySelector(".modal__form");
 const deleteCardSubmitBtn = deleteCardModal.querySelector(
-  ".modal__submit-button"
+  ".modal__button_delete"
 );
 const deleteCardCloseBtn = deleteCardModal.querySelector(".modal__close");
+const deleteCardCancelBtn = deleteCardModal.querySelector(
+  ".modal__button_cancel"
+);
 
 const editAvatarModal = document.querySelector("#edit-avatar-modal");
 const editAvatarFormEl = editAvatarModal.querySelector(".modal__form");
@@ -177,6 +183,10 @@ deleteCardCloseBtn.addEventListener("click", () => {
   closeModal(deleteCardModal);
 });
 
+deleteCardCancelBtn.addEventListener("click", () => {
+  closeModal(deleteCardModal);
+});
+
 editFormEl.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
@@ -259,7 +269,7 @@ deleteCardFormEl.addEventListener("submit", (evt) => {
     })
     .catch(console.error)
     .finally(() => {
-      deleteCardSubmitBtn.textContent = "Yes, delete";
+      deleteCardSubmitBtn.textContent = "Delete";
     });
 });
 
